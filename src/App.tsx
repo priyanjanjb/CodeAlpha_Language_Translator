@@ -1,13 +1,11 @@
-import TextArea from './components/textArea'
-import './App.css'
+import Homepage from './components/hompage'
+
 
 function App() {
 
   return (
     <>
-      <h1>My App</h1>
-      <TextArea />
-      <TextArea />
+      <Homepage />
     </>
   )
 }

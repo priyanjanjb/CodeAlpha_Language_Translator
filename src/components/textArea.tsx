@@ -1,6 +1,4 @@
-import React from 'react'
-
-function textArea() {
+function TextArea() {
   return (
     <div>
       <textarea className='textArea' placeholder='TEXT' />
@@ -8,4 +6,4 @@ function textArea() {
   )
 }
 
-export default textArea
+export default TextArea

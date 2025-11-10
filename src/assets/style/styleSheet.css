@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Whole page layout */
+.container {
+  @apply flex flex-col items-center justify-center min-h-screen bg-gray-100;
+}
+
+/* Title (first row) */
+.headingBar {
+  @apply text-3xl font-bold text-gray-800 mb-10;
+}
+
+/* 2nd row: horizontal layout for left, arrow, right */
+.contentRow {
+  @apply flex flex-row items-start justify-center gap-6 w-full max-w-5xl;
+}
+
+/* Sidebars and arrow cards */
+.leftSideBar,
+.swapArrow,
+.rightSideBar {
+  @apply flex flex-col items-center bg-white p-6 rounded-2xl shadow-md h-[450px];
+}
+
+/* Specific widths */
+.leftSideBar,
+.rightSideBar {
+  @apply w-72;
+}
+
+.swapArrow {
+  @apply w-20 flex items-center justify-center;
+}
+
+/* Hover effect for the image */
+.swapArrow img {
+  @apply cursor-pointer hover:scale-110 transition-transform duration-300;
+}
