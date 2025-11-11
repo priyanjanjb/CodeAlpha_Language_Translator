@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import LanguageSection from './languageSection'
 import TextArea from './textArea'
 import '../assets/style/styleSheet.css'
 import arrw from '../assets/images/swap.svg'
 
 function Homepage() {
+  const [rotated, setRotated] = useState(false);
+  const [inputText, setInputText] = useState('');
   return (
     <div className='container'>
       {/* 1st Row: Title */}
@@ -13,16 +16,28 @@ function Homepage() {
       <div className="contentRow">
         <div className="leftSideBar">
           <LanguageSection />
-          <TextArea />
+          <TextArea 
+            value={inputText}
+            onChange={(e) => setInputText(e.target.value)}
+          />
         </div>
 
         <div className="swapArrow">
-          <img src={arrw} alt="arrow" height={50} width={50}/>
+          <img
+            src={arrw}
+            alt="swap"
+            onClick={() => setRotated(!rotated)}
+            className={rotated ? 'rotated' : ''}
+          />
         </div>
 
         <div className="rightSideBar">
           <LanguageSection />
-          <TextArea />
+          <TextArea 
+            value={inputText}
+            onChange={() => {}}
+            readOnly={true}
+          />
         </div>
       </div>
     </div>

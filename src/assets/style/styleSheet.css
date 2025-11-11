@@ -5,7 +5,7 @@
 
 /* Whole page layout */
 .container {
-  @apply flex flex-col items-center justify-center min-h-screen bg-gray-100;
+  @apply border-gray-300 flex flex-col items-center justify-center min-h-screen w-full;
 }
 
 /* Title (first row) */
@@ -15,27 +15,42 @@
 
 /* 2nd row: horizontal layout for left, arrow, right */
 .contentRow {
-  @apply flex flex-row items-start justify-center gap-6 w-full max-w-5xl;
+  @apply flex flex-row justify-center gap-6 w-full max-w-5xl;
 }
 
 /* Sidebars and arrow cards */
 .leftSideBar,
 .swapArrow,
 .rightSideBar {
-  @apply flex flex-col items-center bg-white p-6 rounded-2xl shadow-md h-[450px];
+  @apply  flex flex-col bg-white p-3 rounded-2xl shadow-md h-[250px];
 }
 
 /* Specific widths */
 .leftSideBar,
 .rightSideBar {
-  @apply w-72;
+  @apply  w-full max-w-sm;
 }
 
+
+/* Arrow image container */
 .swapArrow {
-  @apply w-20 flex items-center justify-center;
+  @apply flex justify-center items-center;
 }
 
-/* Hover effect for the image */
+/* Default image styles */
 .swapArrow img {
-  @apply cursor-pointer hover:scale-110 transition-transform duration-300;
+  @apply w-10 h-10 cursor-pointer transition-transform duration-300 hover:scale-110;
+}
+
+/* Rotated state (applied when clicked) */
+.rotated {
+  @apply rotate-180;
+}
+
+/*-------------------------------------------------------*/
+
+
+/* Text areas inside sidebars */
+.textArea {
+  @apply bg-gray-200/80 w-full h-40 p-4 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-400;
 }
