@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import LanguageSection from './languageSection'
 import TextArea from './textArea'
 import '../assets/style/styleSheet.css'
@@ -17,6 +17,7 @@ function Homepage() {
         <div className="leftSideBar">
           <LanguageSection />
           <TextArea 
+            placeholder='ENTER YOUR TEXT'
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
           />
@@ -33,7 +34,8 @@ function Homepage() {
 
         <div className="rightSideBar">
           <LanguageSection />
-          <TextArea 
+          <TextArea
+            placeholder='TRANSLATED TEXT'
             value={inputText}
             onChange={() => {}}
             readOnly={true}
