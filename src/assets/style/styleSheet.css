@@ -5,12 +5,12 @@
 
 /* Whole page layout */
 .container {
-  @apply bg-[#6A89A7] flex flex-col items-center justify-center min-h-screen min-w-full w-full;
+  @apply bg-[#333233] flex flex-col items-center justify-center min-h-screen min-w-full w-full;
 }
 
 /* Title (first row) */
 .headingBar {
-  @apply text-3xl font-bold text-gray-800 mb-10;
+  @apply text-3xl font-bold text-[#1ec7be] mb-10;
 }
 
 /* 2nd row: horizontal layout for left, arrow, right */
@@ -21,7 +21,7 @@
 /* Sidebars and arrow cards */
 .leftSideBar,
 .rightSideBar {
-  @apply  flex flex-col bg-white p-3 rounded-2xl shadow-md ;
+  @apply  flex flex-col bg-[#6b6b6b] p-3 rounded-2xl shadow-md ;
 }
 
 /* Specific widths */
